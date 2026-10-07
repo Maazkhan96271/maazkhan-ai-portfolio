@@ -366,7 +366,11 @@ async function llmOnce(q, model, ms) {
       }),
       signal: ctrl.signal
     });
-    if (!res.ok) throw new Error("http " + res.status);
+    if (!res.ok) {
+      const err = new Error("http " + res.status);
+      err.definitive = true; /* the server refused — retrying won't help */
+      throw err;
+    }
     const data = await res.json();
     const text = data && data.choices && data.choices[0] && data.choices[0].message
       ? String(data.choices[0].message.content || "").trim()
@@ -378,32 +382,61 @@ async function llmOnce(q, model, ms) {
   }
 }
 
-/* two models, one retry each — then the local knowledge base takes over */
+/* two models; only retry when the request hung or the network dropped */
 async function llmAnswer(q) {
   const plan = [
-    { model: "openai", ms: 12000 },
-    { model: "openai-fast", ms: 9000 }
+    { model: "openai", ms: 11000 },
+    { model: "openai-fast", ms: 8000 }
   ];
   let err;
   for (let i = 0; i < plan.length; i++) {
-    if (i) await sleep(1400);
+    if (i) await sleep(900);
     try { return await llmOnce(q, plan[i].model, plan[i].ms); }
-    catch (e) { err = e; }
+    catch (e) { err = e; if (e.definitive) break; }
   }
   throw err;
 }
 
 /* progressive reveal, so a real LLM answer arrives like a stream */
+function escapeHTML(s) {
+  return s.replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+}
+function inlineMD(s) {
+  return s
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/`([^`]+)`/g, "<code>$1</code>");
+}
+/* tiny markdown: bold, code, bullet lines — enough for a chat bubble */
+function md(s) {
+  const lines = escapeHTML(String(s).trim()).split(/\n+/);
+  const out = [];
+  let inList = false;
+  const close = () => { if (inList) { out.push("</ul>"); inList = false; } };
+  lines.forEach(line => {
+    const m = line.match(/^\s*(?:[-*•]|\d+[.)])\s+(.*)$/);
+    if (m) {
+      if (!inList) { out.push("<ul>"); inList = true; }
+      out.push("<li>" + inlineMD(m[1]) + "</li>");
+    } else if (line.trim()) {
+      close();
+      out.push("<div>" + inlineMD(line) + "</div>");
+    }
+  });
+  close();
+  return out.join("");
+}
 function revealLive(el, text) {
-  if (reduce || text.length < 90) { el.textContent = text; return; }
+  const plain = text.replace(/\*\*/g, "").replace(/`/g, "");
+  const done = () => { el.innerHTML = md(text); };
+  if (reduce || plain.length < 90) { done(); return; }
   let i = 0;
-  const step = Math.max(2, Math.round(text.length / 120));
+  const step = Math.max(2, Math.round(plain.length / 120));
   const tick = () => {
-    i = Math.min(text.length, i + step);
-    el.textContent = text.slice(0, i);
-    el.scrollTop = el.scrollHeight;
+    i = Math.min(plain.length, i + step);
+    el.textContent = plain.slice(0, i);
     chatLog.scrollTop = chatLog.scrollHeight;
-    if (i < text.length) setTimeout(tick, 18);
+    if (i < plain.length) setTimeout(tick, 18);
+    else done();
   };
   tick();
 }
@@ -422,7 +455,7 @@ async function ask(q) {
   try {
     text = await Promise.race([
       llmAnswer(q),
-      new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), 21000))
+      new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), 13000))
     ]);
   } catch (err) {
     live = false;

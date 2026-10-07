@@ -458,6 +458,10 @@ body::after{
 .msg.me{align-self:flex-end;background:var(--grad);color:#fff;border-bottom-right-radius:6px}
 .msg.bot b{color:#fff}
 .msg.live::after{content:"▋";margin-left:2px;color:var(--a2);animation:blink .9s steps(2,start) infinite}
+.msg strong{font-weight:700;color:var(--text)}
+.msg.me strong,.msg.me b{color:#fff}
+.msg div + div{margin-top:4px}
+.msg code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;color:var(--a2)}
 .msg-fallback{display:block;margin-top:8px;font-size:10.6px;font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
 .msg ul{margin:7px 0 0;padding-left:17px}
 .msg li{margin-bottom:3px}
