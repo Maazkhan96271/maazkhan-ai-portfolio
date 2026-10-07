@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maaz Khan — Applied AI Student &amp; Software Engineer in the Making</title>
+<meta name="description" content="Maaz Khan is a B.Tech Applied AI student at Polaris School of Technology building AI-native web experiences with React, Python and C++. Aiming to be a software engineer by 2030.">
+<meta name="theme-color" content="#05060c">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Maaz Khan — Applied AI Student &amp; Aspiring SWE">
+<meta property="og:description" content="AI-native web experiences, built by a student on a mission to become a software engineer by 2030.">
+<meta property="og:image" content="assets/portrait.jpg">
+<meta property="og:url" content="https://maazkhan96271.github.io/maazkhan-ai-portfolio/">
+<link rel="canonical" href="https://maazkhan96271.github.io/maazkhan-ai-portfolio/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+<div class="bg-layer" aria-hidden="true">
+  <span class="orb orb-a"></span><span class="orb orb-b"></span><span class="orb orb-c"></span>
+  <span class="grid-lines"></span>
+</div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">MK</span>
+      <span class="brand-copy">Maaz Khan<em>Applied AI · Polaris</em></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#about">About</a><a href="#stack">Stack</a><a href="#work">Work</a>
+      <a href="#ai">AI</a><a href="#socials">Socials</a><a href="#journey">Journey</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Open command palette" title="Command palette — ⌘K">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle colour theme" title="Toggle theme">
+        <svg class="i-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="btn btn-sm btn-primary" href="#contact">Let's talk</a>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="pill reveal"><span class="dot"></span> Open to internships &amp; collaborations</span>
+      <p class="eyebrow reveal">Hi, I'm</p>
+      <h1 class="reveal">Maaz <span class="grad">Khan</span></h1>
+      <p class="lede reveal">A <strong>B.Tech Applied AI</strong> student at Polaris School of Technology who ships AI-native web experiences — and is on a mission to become a software engineer by <strong>2030</strong>.</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="#work">View my work
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <button class="btn btn-ghost" data-ask-ai>
+          <span class="spark">✦</span> Ask my AI
+        </button>
+      </div>
+      <dl class="hero-stats reveal">
+        <div><dt data-count="8" data-suffix="+">0</dt><dd>technologies</dd></div>
+        <div><dt data-count="4" data-suffix="+">0</dt><dd>things I've built</dd></div>
+        <div><dt data-count="2030" data-plain="1">0</dt><dd>SWE goal</dd></div>
+      </dl>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="photo-frame" id="photoFrame">
+        <div class="frame-bar">
+          <span class="frame-dots"><i></i><i></i><i></i></span>
+          <span class="frame-title">maaz_portrait.jpg</span>
+          <span class="frame-zoom">⌗</span>
+        </div>
+        <div class="frame-media">
+          <img src="assets/portrait.jpg" alt="Portrait of Maaz Khan working on a laptop" width="880" height="1100" fetchpriority="high">
+          <span class="frame-grid"></span>
+          <span class="frame-scan"></span>
+        </div>
+        <div class="frame-foot">
+          <span class="frame-name">Maaz Khan</span>
+          <span class="frame-role">Applied AI · Polaris</span>
+          <span class="frame-live"><i></i> live</span>
+        </div>
+        <span class="corner c-tl"></span><span class="corner c-tr"></span>
+        <span class="corner c-bl"></span><span class="corner c-br"></span>
+      </div>
+      <span class="chip chip-1">React</span>
+      <span class="chip chip-2">Python</span>
+      <span class="chip chip-3">C++</span>
+      <span class="chip chip-4">✦ LLMs</span>
+      <span class="status-card"><span class="dot"></span> Building something new</span>
+    </div>
+  </div>
+  <a class="scroll-hint" href="#marquee" aria-label="Scroll down"><span></span>scroll</a>
+</section>
+
+<section class="marquee" id="marquee" aria-label="Technologies I use">
+  <div class="marquee-track">
+    <div class="marquee-set">
+      <span>React</span><i>✦</i><span>Python</span><i>✦</i><span>JavaScript</span><i>✦</i><span>C++</span><i>✦</i><span>Java</span><i>✦</i><span>HTML5</span><i>✦</i><span>CSS3</span><i>✦</i><span>Applied AI</span><i>✦</i><span>LLM APIs</span><i>✦</i>
+    </div>
+    <div class="marquee-set" aria-hidden="true">
+      <span>React</span><i>✦</i><span>Python</span><i>✦</i><span>JavaScript</span><i>✦</i><span>C++</span><i>✦</i><span>Java</span><i>✦</i><span>HTML5</span><i>✦</i><span>CSS3</span><i>✦</i><span>Applied AI</span><i>✦</i><span>LLM APIs</span><i>✦</i>
+    </div>
+  </div>
+</section>
+<section class="section" id="about">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="kicker">01 — About</span>
+      <h2>Student today, <span class="grad">software engineer</span> by 2030.</h2>
+    </header>
+    <div class="about-grid">
+      <figure class="about-photo reveal">
+        <img src="assets/profile.jpg" alt="Maaz Khan smiling at his desk" width="1000" height="1000" loading="lazy">
+        <figcaption><span class="dot"></span> Polaris School of Technology</figcaption>
+      </figure>
+      <div class="about-body">
+        <p class="reveal">I'm <strong>Maaz Khan</strong> — a B.Tech Applied AI student who fell for building things on the web and never stopped. I started with HTML pages and CSS layouts, moved into JavaScript and React, and now I spend my days at the intersection of <strong>AI and the web</strong>.</p>
+        <p class="reveal">I care about interfaces that feel alive: fast, thoughtful, and a little bit magical. When I'm not in lectures I'm shipping side projects, breaking them, and putting them back together better.</p>
+        <div class="now reveal">
+          <h3>Now</h3>
+          <ul>
+            <li><span>Studying</span> B.Tech Applied AI @ Polaris School of Technology</li>
+            <li><span>Building</span> AI-assisted web projects with React &amp; Python</li>
+            <li><span>Learning</span> system design, DSA in C++, and LLM app patterns</li>
+            <li><span>Goal</span> SWE offer in hand before 2030</li>
+          </ul>
+        </div>
+        <ul class="fact-row reveal">
+          <li>🌐 Remote-friendly</li><li>⚡ Fast learner</li><li>🤝 Team player</li><li>🚀 Ships often</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="stack">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="kicker">02 — Stack</span>
+      <h2>The tools I <span class="grad">think in</span>.</h2>
+      <p class="sec-sub">Self-assessed comfort level after years of building, breaking and rebuilding.</p>
+    </header>
+    <div class="stack-grid">
+      <article class="stack-card reveal">
+        <h3><span class="badge-dot c1"></span> Languages</h3>
+        <div class="skill" data-level="88"><span>Python</span><b>88%</b></div>
+        <div class="skill" data-level="84"><span>JavaScript</span><b>84%</b></div>
+        <div class="skill" data-level="78"><span>C++</span><b>78%</b></div>
+        <div class="skill" data-level="72"><span>Java</span><b>72%</b></div>
+      </article>
+      <article class="stack-card reveal">
+        <h3><span class="badge-dot c2"></span> Web</h3>
+        <div class="skill" data-level="90"><span>React</span><b>90%</b></div>
+        <div class="skill" data-level="92"><span>HTML5</span><b>92%</b></div>
+        <div class="skill" data-level="88"><span>CSS3</span><b>88%</b></div>
+        <div class="skill" data-level="70"><span>REST &amp; APIs</span><b>70%</b></div>
+      </article>
+      <article class="stack-card reveal">
+        <h3><span class="badge-dot c3"></span> Applied AI</h3>
+        <div class="skill" data-level="82"><span>Prompt engineering</span><b>82%</b></div>
+        <div class="skill" data-level="76"><span>LLM APIs</span><b>76%</b></div>
+        <div class="skill" data-level="70"><span>Pandas / NumPy</span><b>70%</b></div>
+        <div class="skill" data-level="62"><span>Model fine-tuning</span><b>62%</b></div>
+      </article>
+      <article class="stack-card reveal stack-card-live">
+        <h3><span class="badge-dot c4"></span> Currently learning</h3>
+        <ul class="learn-list">
+          <li>TypeScript</li><li>Next.js</li><li>PyTorch</li><li>System design</li>
+          <li>DSA in C++</li><li>Postgres</li><li>Docker</li><li>Cloud deploy</li>
+        </ul>
+        <p class="learn-note">Learning in public — one commit at a time.</p>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section" id="work">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="kicker">03 — Selected work</span>
+      <h2>Things I've <span class="grad">shipped</span>.</h2>
+      <p class="sec-sub">Side projects built between lectures — each one taught me something the syllabus didn't.</p>
+    </header>
+    <div class="work-grid">
+      <article class="work-card reveal">
+        <div class="work-art art-1"><span>01</span></div>
+        <div class="work-body">
+          <div class="work-tags"><span>React</span><span>JavaScript</span><span>AI</span></div>
+          <h3>Prompt Playground</h3>
+          <p>A sandbox for testing LLM prompts side by side — save variants, compare answers, keep the winners.</p>
+          <a class="work-link" href="https://github.com/Maazkhan96271" target="_blank" rel="noopener">View on GitHub <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+      <article class="work-card reveal">
+        <div class="work-art art-2"><span>02</span></div>
+        <div class="work-body">
+          <div class="work-tags"><span>Python</span><span>Flask</span><span>NLP</span></div>
+          <h3>StudyMate AI</h3>
+          <p>Turns messy lecture notes into clean summaries, flashcards and quiz questions in one click.</p>
+          <a class="work-link" href="https://github.com/Maazkhan96271" target="_blank" rel="noopener">View on GitHub <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+      <article class="work-card reveal">
+        <div class="work-art art-3"><span>03</span></div>
+        <div class="work-body">
+          <div class="work-tags"><span>C++</span><span>Algorithms</span><span>CLI</span></div>
+          <h3>DSA Drill</h3>
+          <p>A terminal drill for the patterns I keep forgetting — spaced repetition for data structures.</p>
+          <a class="work-link" href="https://github.com/Maazkhan96271" target="_blank" rel="noopener">View on GitHub <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+      <article class="work-card reveal">
+        <div class="work-art art-4"><span>04</span></div>
+        <div class="work-body">
+          <div class="work-tags"><span>HTML</span><span>CSS</span><span>Motion</span></div>
+          <h3>This Portfolio</h3>
+          <p>The site you're on: hand-built, no framework, with a command palette and an assistant that answers about me.</p>
+          <a class="work-link" href="#ai">See the AI features <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+    </div>
+    <p class="work-note reveal">More on <a href="https://github.com/Maazkhan96271" target="_blank" rel="noopener">GitHub</a> — I ship in public.</p>
+  </div>
+</section>
+
+<section class="section section-alt" id="ai">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="kicker">04 — AI features</span>
+      <h2>A portfolio that <span class="grad">talks back</span>.</h2>
+      <p class="sec-sub">No plugins, no frameworks — just a few ideas from the AI era, wired in by hand.</p>
+    </header>
+    <div class="ai-grid">
+      <article class="ai-card reveal">
+        <div class="ai-ico">✦</div>
+        <h3>Ask my AI</h3>
+        <p>A live LLM agent with my whole profile baked in — ask it anything about my skills, projects or goals.</p>
+        <button class="chip-btn" data-ask-ai>Try it →</button>
+      </article>
+      <article class="ai-card reveal">
+        <div class="ai-ico">⌘</div>
+        <h3>Command palette</h3>
+        <p>Press <kbd>⌘</kbd><kbd>K</kbd> to jump anywhere, open socials or flip the theme — instantly.</p>
+        <button class="chip-btn" data-open-palette>Open palette →</button>
+      </article>
+      <article class="ai-card reveal">
+        <div class="ai-ico">◐</div>
+        <h3>Adaptive theme</h3>
+        <p>Dark by default, light when you need it. Your choice is remembered on every visit.</p>
+        <button class="chip-btn" data-toggle-theme>Switch theme →</button>
+      </article>
+      <article class="ai-card reveal">
+        <div class="ai-ico">⚡</div>
+        <h3>Motion, tuned</h3>
+        <p>Scroll reveals, magnetic buttons and counters that respect <code>prefers-reduced-motion</code>.</p>
+        <span class="chip-btn is-static">Already running</span>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section" id="socials">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="kicker">05 — Socials</span>
+      <h2>Find me <span class="grad">everywhere</span>.</h2>
+      <p class="sec-sub">Code on GitHub, thoughts on X, life on Instagram. Hover a tile — click to visit.</p>
+    </header>
+    <div class="social-grid">
+      <a class="social reveal" style="--brand:#ffffff" href="https://github.com/Maazkhan96271" target="_blank" rel="noopener">
+        <span class="brand-icon" style="--icon:url('assets/icons/github.svg')"></span>
+        <span class="social-copy"><b>GitHub</b><small>@Maazkhan96271</small></span>
+        <span class="social-go">↗</span>
+      </a>
+      <a class="social reveal" style="--brand:#0a66c2" href="https://www.linkedin.com/in/maaz-khan-9124232bb/" target="_blank" rel="noopener">
+        <span class="brand-icon" style="--icon:url('assets/icons/linkedin.svg')"></span>
+        <span class="social-copy"><b>LinkedIn</b><small>maaz-khan</small></span>
+        <span class="social-go">↗</span>
+      </a>
+      <a class="social reveal" style="--brand:#e1306c" href="https://www.instagram.com/khan.maazasif5/" target="_blank" rel="noopener">
+        <span class="brand-icon" style="--icon:url('assets/icons/instagram.svg')"></span>
+        <span class="social-copy"><b>Instagram</b><small>@khan.maazasif5</small></span>
+        <span class="social-go">↗</span>
+      </a>
+      <a class="social reveal" style="--brand:#ffffff" href="https://x.com/maazasifkhan5" target="_blank" rel="noopener">
+        <span class="brand-icon" style="--icon:url('assets/icons/x.svg')"></span>
+        <span class="social-copy"><b>X / Twitter</b><small>@maazasifkhan5</small></span>
+        <span class="social-go">↗</span>
+      </a>
+      <a class="social reveal" style="--brand:#ffffff" href="https://www.threads.net/@khan.maazasif5" target="_blank" rel="noopener">
+        <span class="brand-icon" style="--icon:url('assets/icons/threads.svg')"></span>
+        <span class="social-copy"><b>Threads</b><small>@khan.maazasif5</small></span>
+        <span class="social-go">↗</span>
+      </a>
+      <a class="social reveal" style="--brand:#ff0033" href="https://www.youtube.com/@MaazKhan-5" target="_blank" rel="noopener">
+        <span class="brand-icon" style="--icon:url('assets/icons/youtube.svg')"></span>
+        <span class="social-copy"><b>YouTube</b><small>@MaazKhan-5</small></span>
+        <span class="social-go">↗</span>
+      </a>
+      <button class="social reveal" style="--brand:#5865f2" type="button" data-copy="maazkhan-26796" data-toast="Discord handle copied — send me a request!">
+        <span class="brand-icon" style="--icon:url('assets/icons/discord.svg')"></span>
+        <span class="social-copy"><b>Discord</b><small>@maazkhan-26796 · click to copy</small></span>
+        <span class="social-go">⧉</span>
+      </button>
+      <a class="social social-pending reveal" style="--brand:#ffffff" href="#contact" title="Add your Notion link and I'll wire it in">
+        <span class="brand-icon" style="--icon:url('assets/icons/notion.svg')"></span>
+        <span class="social-copy"><b>Notion</b><small>link coming soon</small></span>
+        <span class="social-go">·</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="journey">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="kicker">06 — Journey</span>
+      <h2>From first line of code to <span class="grad">2030</span>.</h2>
+    </header>
+    <ol class="timeline">
+      <li class="reveal"><span class="t-dot"></span><div><b>The foundation</b><em>HTML, CSS, C++, Java &amp; JavaScript</em><p>Self-taught the basics and realised I liked making things people could actually click.</p></div></li>
+      <li class="reveal"><span class="t-dot"></span><div><b>B.Tech, Applied AI</b><em>Polaris School of Technology</em><p>Moving from scripts to systems — machine learning, data structures and building for real users.</p></div></li>
+      <li class="reveal"><span class="t-dot now"></span><div><b>Right now</b><em>React + Python + LLMs</em><p>Shipping AI-assisted projects, learning in public, and levelling up the craft of front-end.</p></div></li>
+      <li class="reveal"><span class="t-dot future"></span><div><b>2030 — Software Engineer</b><em>The goal</em><p>A role where I build products that matter, with a team that ships fast and cares about the details.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <span class="kicker">07 — Contact</span>
+      <h2>Let's build something <span class="grad">worth shipping</span>.</h2>
+      <p>Internships, collaborations, or just a chat about AI and the web — my inbox and DMs are open.</p>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/maaz-khan-9124232bb/" target="_blank" rel="noopener">Message on LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/Maazkhan96271" target="_blank" rel="noopener">See GitHub</a>
+        <button class="btn btn-ghost" data-copy="maazkhan-26796" data-toast="Discord handle copied">Copy Discord</button>
+        <button class="btn btn-ghost" data-ask-ai><span class="spark">✦</span> Ask my AI</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand"><span class="brand-mark">MK</span><p>Maaz Khan<em>Applied AI student · future software engineer</em></p></div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#about">About</a><a href="#stack">Stack</a><a href="#work">Work</a><a href="#ai">AI</a><a href="#socials">Socials</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="to-top" id="toTop">Back to top ↑</button>
+  </div>
+  <div class="wrap footer-base">
+    <span>© <span id="year">2026</span> Maaz Khan</span>
+    <span>Hand-built with HTML, CSS, JS &amp; ☕</span>
+  </div>
+</footer>
+
+<div class="palette" id="palette" hidden>
+  <div class="palette-backdrop" data-close-palette></div>
+  <div class="palette-box" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="palette-input">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="paletteInput" type="text" placeholder="Search pages, socials, actions…" autocomplete="off" aria-label="Search commands">
+      <kbd>esc</kbd>
+    </div>
+    <ul class="palette-list" id="paletteList" role="listbox"></ul>
+    <div class="palette-foot"><span>↑↓ navigate</span><span>↵ open</span><span>esc close</span></div>
+  </div>
+</div>
+
+<div class="chat" id="chat" hidden>
+  <div class="chat-backdrop" data-close-chat></div>
+  <aside class="chat-panel" role="dialog" aria-modal="true" aria-label="Ask Maaz AI">
+    <header class="chat-head">
+      <span class="chat-avatar"><img src="assets/profile.jpg" alt=""></span>
+      <div><b>Ask Maaz <i>AI</i></b><small><span class="dot"></span> live LLM · answers instantly</small></div>
+      <button class="icon-btn" data-close-chat aria-label="Close assistant">✕</button>
+    </header>
+    <div class="chat-log" id="chatLog" aria-live="polite"></div>
+    <div class="chat-suggest" id="chatSuggest">
+      <button>What can Maaz do?</button><button>Tell me about his projects</button>
+      <button>How do I contact him?</button><button>What's his goal?</button>
+    </div>
+    <form class="chat-form" id="chatForm">
+      <input id="chatInput" type="text" placeholder="Ask anything about Maaz…" autocomplete="off" aria-label="Ask a question">
+      <button type="submit" aria-label="Send">↑</button>
+    </form>
+  </aside>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js" defer></script>
+</body>
+</html>
