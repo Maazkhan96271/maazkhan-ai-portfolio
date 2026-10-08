@@ -387,17 +387,19 @@
   <aside class="chat-panel" role="dialog" aria-modal="true" aria-label="Ask Maaz AI">
     <header class="chat-head">
       <span class="chat-avatar"><img src="assets/profile.jpg" alt=""></span>
-      <div><b>Ask Maaz <i>AI</i></b><small><span class="dot"></span> live LLM · answers instantly</small></div>
+      <div><b>Ask Maaz <i>AI</i></b><small><span class="dot"></span> live LLM · answers anything</small></div>
       <button class="icon-btn" data-close-chat aria-label="Close assistant">✕</button>
     </header>
     <div class="chat-log" id="chatLog" aria-live="polite"></div>
+    <div class="chat-note" id="chatNote"></div>
     <div class="chat-suggest" id="chatSuggest">
       <button>What can Maaz do?</button><button>Tell me about his projects</button>
-      <button>How do I contact him?</button><button>What's his goal?</button>
+      <button>Explain quantum computing</button><button>Write a Python quicksort</button>
+      <button>How do I contact him?</button><button>What's his goal for 2030?</button>
     </div>
     <form class="chat-form" id="chatForm">
-      <input id="chatInput" type="text" placeholder="Ask anything about Maaz…" autocomplete="off" aria-label="Ask a question">
-      <button type="submit" aria-label="Send">↑</button>
+      <textarea id="chatInput" rows="1" placeholder="Ask anything — about Maaz or any topic…" aria-label="Ask a question"></textarea>
+      <button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 11.9 20 4.5l-7.4 15.5-2.1-6.4-6-1.7Z"/></svg></button>
     </form>
   </aside>
 </div>
